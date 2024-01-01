@@ -1,0 +1,118 @@
+#intro .content-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: 80vh;
+  color: black;
+}
+
+/* .intro-content-1 {
+  width: 45%;
+} */
+
+.intro-content-1 h1 {
+  font-size: 4rem;
+  padding-bottom: 3rem;
+  max-width: 600px;
+  /* max-width: 90%; */
+  text-transform: none;
+}
+.intro-content-1 ul {
+  list-style-type: none;
+}
+.intro-content-1 ul li {
+  position: relative;
+  padding-left: 4rem;
+}
+.intro-content-1 ul li::before {
+  position: absolute;
+  content: '';
+  /* background-color: rgb(47, 255, 92); */
+  /* background-color: var(--color-green); */
+  background-color: var(--color-blue);
+  width: 1.5ch;
+  height: 1.5ch;
+  border-radius: 50%;
+  top: .5ch;
+  left: 0;
+}
+
+
+#img-1 {
+  width: 53%;
+}
+
+@media (max-width: 1020px) {
+  p {
+    font-size: 2rem;
+  }
+  #intro h1 {
+    font-size: 3.8rem;
+    padding-bottom: 3rem;
+    max-width: 25ch;
+    margin: 0 50px;
+    /* max-width: 100%; */
+    text-align: center;
+  }
+
+  .intro-content-1 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #intro {
+    height: max-content;
+  }
+  #intro .content-1 {
+    padding: 5rem 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    height: max-content;
+    width: 100%;
+  }
+  #intro-content-1 {
+    width: 100%;
+  }
+  /* #intro > .content-1 > #intro-content-1 > h1 {
+    font-size: 3.8rem !important;
+    padding-bottom: 3rem;
+    max-width: 100%;
+    text-align: center;
+  } */
+  #intro .content-1 {
+    min-height: 85vh;
+  }
+  #intro .content-1 img {
+    max-width: 700px;
+    width: auto;
+  }
+}
+
+@media (max-width: 870px) {
+  .grid-one {
+    display: block;
+  }
+  .grid-one nav {
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 800px) {
+  /* main section {
+    padding-top: 7rem;
+  } */
+  #intro .content-1 {
+    padding: 0 0 4rem 0;
+  }
+  #intro .content-1 img {
+    padding-top: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  
+}
