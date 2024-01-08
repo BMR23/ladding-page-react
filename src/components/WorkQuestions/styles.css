@@ -69,8 +69,9 @@ section#questions > div > h2{
 }
 
 .response {
-  display: none;
-  padding: 1rem 10rem;
+  /* display: none; */
+  /* padding: 1rem 10rem; */
+  padding: 1rem 5%;
 
   transition: all 1s ease-in-out;
 }

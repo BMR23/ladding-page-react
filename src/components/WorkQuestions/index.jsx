@@ -1,73 +1,174 @@
-import { useEffect, useRef } from 'react';
+import { useState } from 'react';
 import './styles.css';
 import P from 'prop-types';
 
 export const WorkQuestions = ({ questions, responses }) => {
 
-  const question = useRef(null);
-  const questionButtons = useRef(null);
-  const questionWrapper = useRef(null);
-  const responseQuestions = useRef(null);
-
-  useEffect(() => {
-
-    question.current = document.querySelectorAll('.question');
-    questionButtons.current = document.querySelectorAll('.question-button');
-    questionWrapper.current = document.querySelectorAll('.question-wrapper');
-    responseQuestions.current = document.querySelectorAll('.response');
-
-    questionWrapper.current.forEach((elem, index) => {
-      elem.addEventListener('mouseover', () => {
-        question.current[index].classList.add('color-black');
-        questionButtons.current[index].classList.add('bg_border-black');
-
-      })
-    })
-
-    questionWrapper.current.forEach((elem, index) => {
-      elem.addEventListener('mouseout', () => {
-        question.current[index].classList.remove('color-black');
-        questionButtons.current[index].classList.remove('bg_border-black');
-
-      })
-    })
-  }, [])
-
-  const handleClick = (index) => {
-    let t = responseQuestions.current[index].classList;
-    t.toggle('display-block');
-    console.log(index)
-  }
+  const [isOpen0, setIsOpen0] = useState(false)
+  const [isOpen1, setIsOpen1] = useState(false)
+  const [isOpen2, setIsOpen2] = useState(false)
+  const [isOpen3, setIsOpen3] = useState(false)
 
   return (
+    // <MagicMotion
+    //   transition={{ type: "spring", stiffness: 180, damping: 20, mass: 1.1 }}
+    // >
     <section id="questions">
       <div>
         <h2>Perguntas</h2>
-
-        {questions.map((question, index) => {
-          return (
-            <div className="container-question" key={index}>
-              <div className="question-wrapper" onClick={() => handleClick(index)}>
-                <div className='question'>
-                  <nav>
-                    {question}
-                  </nav>
-                  <nav className='question-button'>
-                  </nav>
-                </div>
-                <div className='response'>
-                  {responses[index]}
-                </div>
-              </div>
+        <div className="container-question">
+          <div className="question-wrapper" onClick={() => setIsOpen0(!isOpen0)}>
+            <div className='question'>
+              <nav>
+                {questions[0]}
+              </nav>
+              {/* <nav className='question-button'>
+                  </nav> */}
+              <svg
+                key="exclude"
+                style={{
+                  transform: `rotate(${isOpen0 ? 180 : 0}deg)`,
+                  transition: "320ms ease-in-out",
+                }}
+                width="20"
+                height="20"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.5 10L15.6714 21L27.5 10"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </div>
-          )
-        })}
+            {isOpen0 && (
+              <div className='response'>
+                {responses[0]}
+              </div>
+            )}
+          </div>
+        </div>
+        {/*  */}
+        <div className="container-question">
+          <div className="question-wrapper" onClick={() => setIsOpen1(!isOpen1)}>
+            <div className='question'>
+              <nav>
+                {questions[1]}
+              </nav>
+              {/* <nav className='question-button'>
+                  </nav> */}
+              <svg
+                key="exclude"
+                style={{
+                  transform: `rotate(${isOpen1 ? 180 : 0}deg)`,
+                  transition: "320ms ease-in-out",
+                }}
+                width="20"
+                height="20"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.5 10L15.6714 21L27.5 10"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            {isOpen1 && (
+              <div className='response'>
+                {responses[1]}
+              </div>
+            )}
+          </div>
+        </div>
+        {/*  */}
+        <div className="container-question">
+          <div className="question-wrapper" onClick={() => setIsOpen2(!isOpen2)}>
+            <div className='question'>
+              <nav>
+                {questions[2]}
+              </nav>
+              {/* <nav className='question-button'>
+                  </nav> */}
+              <svg
+                key="exclude"
+                style={{
+                  transform: `rotate(${isOpen2 ? 180 : 0}deg)`,
+                  transition: "320ms ease-in-out",
+                }}
+                width="20"
+                height="20"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.5 10L15.6714 21L27.5 10"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            {isOpen2 && (
+              <div className='response'>
+                {responses[2]}
+              </div>
+            )}
+          </div>
+        </div>
+        {/*  */}
+        <div className="container-question">
+          <div className="question-wrapper" onClick={() => setIsOpen3(!isOpen3)}>
+            <div className='question'>
+              <nav>
+                {questions[3]}
+              </nav>
+              {/* <nav className='question-button'>
+                  </nav> */}
+              <svg
+                key="exclude"
+                style={{
+                  transform: `rotate(${isOpen3 ? 180 : 0}deg)`,
+                  transition: "320ms ease-in-out",
+                }}
+                width="20"
+                height="20"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.5 10L15.6714 21L27.5 10"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            {isOpen3 && (
+              <div className='response'>
+                {responses[3]}
+              </div>
+            )}
+          </div>
+        </div>
+        {/*  */}
 
         <div className="container-button">
           <button className="button" id='button-questions'>Aqui</button>
         </div>
       </div>
-
     </section >
   )
 }
