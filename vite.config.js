@@ -5,3 +5,18 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 })
+
+// https://vitejs.dev/config/
+defineConfig({
+  plugins: [react()],
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    manifest: true,
+    minify: 'terser',
+    sourcemap: true,
+  },
+  server: {
+    port: 5501,
+  },
+});
