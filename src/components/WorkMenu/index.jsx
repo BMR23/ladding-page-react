@@ -53,6 +53,7 @@ export const WorkMenu = () => {
   }
 
   useEffect(() => {
+    if (!clickedMenu) return;
     const handleClickMain = () => {
       setClickedMenu(!clickedMenu);
       document.querySelector('main').removeEventListener('click', handleClickMain);
