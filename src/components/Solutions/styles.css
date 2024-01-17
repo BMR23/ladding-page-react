@@ -1,0 +1,131 @@
+.solutions-container {
+  max-width: 834px;
+  margin: 0 auto;}
+  @media only screen and (min-width: 1331px) {
+    .solutions-container {
+      width: 70%;
+      max-width: 1200px;
+    }
+  }
+
+.solutions-container > h2, 
+.solutions-container > p
+{
+  width: 100%;
+  text-align: center;
+}
+
+.card-solution {
+  margin-top: 8rem;
+  display: flex;
+  height: min-content;
+  gap: 4rem; }
+  @media only screen and (min-width: 1420px) {
+    .card-solution {
+      gap: 10%;
+    }
+  }
+
+.card-solution:nth-of-type(2){
+  flex-direction: row-reverse;
+}
+
+.card-solution > img{
+  object-fit: contain;
+  margin: auto;
+  /* height: 280px; */
+  height: 400px;
+  flex-shrink: 0;
+  width: min-content;
+}
+
+.card-solution-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-solution-text > h3 {
+  font-weight: 700;
+  font-size: var(--font-size-h2);
+  padding-bottom: 2rem;
+  flex-shrink: 0;
+}
+.card-solution-text > .container-button {
+  width: max-content;
+  /* margin: 0 auto; */
+}
+
+@media only screen and (max-width:808px) {
+  .card-solution-wrapper-all {
+    margin: 0 auto;
+    width: 80%;
+    min-width: 550px;
+  }
+
+  .card-solution {
+    margin-top: 5rem;
+  }
+
+.card-solution-text > h3 {
+  font-size: calc(2rem + .2vw);
+  flex-shrink: 0;
+}
+.card-solution > img{
+  height: 22rem;
+}
+}
+@media only screen and (max-width: 605px) {
+  .card-solution-wrapper-all {
+    width: 80%;
+    min-width: 0;
+  }
+
+  .card-solution {
+    flex-direction: column !important;
+    height: min-content;
+  }
+
+  /* .card-solution:nth-of-type(2){
+    flex-direction: column;
+  } */
+
+  .card-solution-text {
+    text-align: center;
+    text-wrap: pretty;
+  }
+  .card-solution-text > .container-button {
+    margin: 0 auto;
+  }
+}
+
+
+
+.other-solutions {
+  width: 100%;
+}
+.other-solutions > .bg-color{
+  padding: 2rem 0;
+}
+.other-solutions > .bg-color > nav{
+  margin: 0 auto;
+  width: max-content;
+}
+.other-solutions-description {
+  padding: 3rem 0;
+  background-color: #e6e6e6;
+}
+.other-solutions-description > ul {
+  width: max-content;
+  margin: 0 auto;
+}
+.other-solutions-description > ul > li{
+  position: relative;
+  padding-left: 2rem;
+}
+.other-solutions-description > ul > li::before{
+  position: absolute;
+  content: '.';
+  left: 0;
+  top: -60%;
+  font-size: 3rem;
+}

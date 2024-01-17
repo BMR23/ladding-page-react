@@ -25,7 +25,7 @@ export const WorkDepositions = () => {
     <section id="depositions">
       <div>
 
-        <h2>Depoimentos</h2>
+        <h2>Depoimentos de nossos clientes</h2>
 
         <div className="grid-wrapper">
           <div className="grid">

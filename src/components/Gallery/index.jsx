@@ -1,14 +1,18 @@
 // import { Card } from '../Card';
 import "./styles.css";
-import pessoa_img from './img/f.jpeg'
-import paisagem from './img/paisagem.jpeg'
 import { useEffect, useRef, useState } from 'react';
+import { Card } from '../Card';
+import foto1 from './img/foto1.png';
+import foto2 from './img/foto2.jpeg';
+import foto3 from './img/foto3.jpeg';
 // import { useEffect } from 'react';
-
+// import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export const Gallery = () => {
 
-  let [currentItem, setCurrentItem] = useState(2);
+  let [permission, setPermission] = useState(false);
+  let [currentItem, setCurrentItem] = useState(0);
   let itemsRef = useRef([]);
   const items = document.querySelectorAll('.img');
   const maxItems = items.length
@@ -16,8 +20,7 @@ export const Gallery = () => {
 
   useEffect(() => {
     itemsRef.current = document.querySelectorAll('.img');
-    itemsRef.current[2].classList.add('current-img');
-    setCurrentItem(2);
+    setCurrentItem(0);
   }, []);
 
 
@@ -39,25 +42,39 @@ export const Gallery = () => {
   // }, [currentItem]);
 
   useEffect(() => {
+    if (!permission) return
+
     if (itemsRef.current && itemsRef.current.length > 0) {
-      itemsRef.current.forEach((image, index) => {
+      itemsRef.current.forEach((img, index) => {
         if (index !== currentItem) {
-          image.classList.remove("current-img");
+          img.classList.remove("current-img");
         } else {
-          image.classList.add("current-img");
-          image.scrollIntoView({
+          img.classList.add("current-img");
+
+          // const numberOfImgs = itemsRef.current.length - 1;
+          img.scrollIntoView({
             inline: "center",
             behavior: "smooth",
-            block: "nearest",
+            block: "center",
           });
+          // if (numberOfImgs == index) {
+          //   const pai = img.parentNode;
+
+          //   setTimeout(() => {
+          //     const left = pai.clientWidth;
+          //     console.log(left)
+          //     pai.scrollLeft = left
+          //   }, 1100);
+          // }
         }
       });
     }
-  }, [currentItem]);
+  }, [currentItem, permission]);
 
   const controlMove = (name) => {
+
+    if (!name) return
     setCurrentItem(prevItem => {
-      console.log(prevItem)
       let newItem;
       if (prevItem === 2) name == 'left' ? newItem = 1 : newItem = 3;
       else if (name === 'left') {
@@ -71,49 +88,107 @@ export const Gallery = () => {
     })
   };
 
-  const infoPhotos = [
-    {
-      url: "https://source.unsplash.com/random/250x250/?beach",
-      alt: "Imagem de praia",
-    },
-    {
-      url: "https://source.unsplash.com/random/250x250/?animal",
-      alt: "Imagem de animal",
-    },
-    {
-      url: "https://source.unsplash.com/random/250x250/?street",
-      alt: "Imagem de uma rua",
-    },
-    {
-      url: "https://source.unsplash.com/random/250x250/?night",
-      alt: "Imagem da noite",
-    },
-    {
-      url: "https://source.unsplash.com/random/250x250/?nature",
-      alt: "Imagem da natureza",
-    },
-    {
-      url: "https://source.unsplash.com/random/250x250/?flower",
-      alt: "Imagem de flores",
-    },
-    {
-      url: "https://source.unsplash.com/random/250x250/?object",
-      alt: "Imagem de um objeto",
-    },
+  // const infoPhotos = [
+  //   {
+  //     url: "https://source.unsplash.com/random/250x250/?beach",
+  //     alt: "Imagem de praia",
+  //   },
+  //   {
+  //     url: "https://source.unsplash.com/random/250x250/?animal",
+  //     alt: "Imagem de animal",
+  //   },
+  //   {
+  //     url: "https://source.unsplash.com/random/250x250/?street",
+  //     alt: "Imagem de uma rua",
+  //   },
+  //   {
+  //     url: "https://source.unsplash.com/random/250x250/?night",
+  //     alt: "Imagem da noite",
+  //   },
+  //   {
+  //     url: "https://source.unsplash.com/random/250x250/?nature",
+  //     alt: "Imagem da natureza",
+  //   },
+  //   {
+  //     url: "https://source.unsplash.com/random/250x250/?flower",
+  //     alt: "Imagem de flores",
+  //   },
+  //   {
+  //     url: "https://source.unsplash.com/random/250x250/?object",
+  //     alt: "Imagem de um objeto",
+  //   },
 
+  // ]
+  const infoCard = [
+    {
+      name: 'Hello',
+      url_image: foto1
+    },
+    {
+      name: 'Hello',
+      url_image: foto2
+    },
+    {
+      name: 'Hello',
+      url_image: foto3
+    },
+    {
+      name: 'Hello',
+      url_image: foto1
+    },
+    {
+      name: 'Hello',
+      url_image: foto2
+    },
+    {
+      name: 'Hello',
+      url_image: foto3
+    },
   ]
+  /* 
+ 
+  return (
+    <section id="depositions">
+      <div>
+ 
+        <h2>Depoimentos</h2>
+ 
+        <div className="grid-wrapper">
+          <div className="grid">
+            {infoCard.map((e, index) => (
+              <div className="container-card" key={index}>
+                <Card name={e.name} url_image={e.url_image} />
+              </div>
+            ))}
+          </div>
+        </div>
+ 
+      </div>
+    </section>
+  )
+  */
 
   return (
-    <section>
+    <section id="depositions" onMouseOver={() => setPermission(true)}>
       <div>
+        <h2> Depoimentos de nossos clientes</h2>
         <div className='container-gallery'>
-          <div data-name='left' className='control item-1' onClick={(e) => controlMove(e.target.dataset.name)}> </div>
-          <div data-name='right' className='control item-2' onClick={(e) => controlMove(e.target.dataset.name)}> </div>
+          <div className="content-controls">
+            <div data-name='left' className='content-control' onClick={(e) => controlMove(e.target.dataset.name)}>
+              <IoIosArrowBack data-name='left' className='control item-1' />
+            </div>
+            <div data-name='right' className='content-control' onClick={(e) => controlMove(e.target.dataset.name)}>
+              <IoIosArrowForward data-name='right' className='control item-2' />
+            </div>
+          </div>
           <div className='gallery-wrapper'>
             <div className="gallery">
-              {infoPhotos.map((e, index) => (
-                <img className='img' key={index}
-                  src={e.url} alt={e.alt} />
+              {infoCard.map((e, index) => (
+                // <img className='img' key={index}
+                //   src={e.url} alt={e.alt} />
+                <div className="container-card img" key={index}>
+                  <Card name={e.name} url_image={e.url_image} />
+                </div>
               ))}
             </div>
           </div>

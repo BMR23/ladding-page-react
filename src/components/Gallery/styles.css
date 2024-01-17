@@ -26,10 +26,11 @@
 /* //////////////////////////////// */
 
 .container-gallery {
-  position: relative;
   /* width: 530px; */
-  width: 1060px;
-  margin: 10rem auto;
+  /* max-width: 1060px; */
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .gallery-wrapper {
@@ -47,9 +48,10 @@
 
 .gallery {
   width: 100%;
-  height: max-content;
+  height: 33rem;
   /* background-color: rgba(211, 211, 211, 0.151); */
   display: flex;
+  align-items: center;
   flex-flow: row nowrap;
   gap: 15px;
   width: max-content;
@@ -59,47 +61,36 @@
 }
 
 .img {
-  width: 250px;
-  height: 250px;
+  /* width: 250px;
+  height: 250px; */
   flex-shrink: 0;
-  opacity: 0.6;
+  opacity: 0.9;
   border-radius: 25px;
   /* border-radius: 10%; */
 }
 
 .current-img {
   opacity: 1;
+  /* transform: scale(1.05); */
+  /* padding: 0 10px; */
+  transition: all .1s ease;
+  z-index: 5;
 }
 
-.item-1 {
-  left: 0;
-  background: linear-gradient(to left, transparent 0%, black 200%);  
-}
 
-.item-1::before {
-  content: '◀';
-}
-
-.item-2 {
-  right: 0;
-  background: linear-gradient(to right, transparent 0%, black 200%);
-}
-
-.item-2::before {
-  content: '▶';
-}
-
-.control {
+.content-controls {
+  display: flex;
+  gap: 5px;
   position: absolute;
   z-index: 4;
+  top: -5rem;
+  right: 0;
 
-  border-radius: 0 25px 25px 0;
 
-  height: 100%;
-  width: 8rem;
+  /* height: 100%;
+  width: 8rem; */
   border: none;
-  cursor: pointer;
-  opacity: 0.1;
+  /* opacity: 0.5; */
 
   display: flex;
   justify-content: center;
@@ -107,16 +98,36 @@
 
   font-family: sans-serif;
   color: white;
-  font-size: 4rem;
-  font-weight: 600;
+  font-size: 3rem;
+  font-weight: 400;
   transition: background-color, opacity .6s ease-in-out;
+
+
+}
+.content-control {
+  /* display: flex; */
+
+  border-radius: 50%;
+  background-color: var(--color-black);
+  padding: 1.4rem;
+  /* opacity: 0.5; */
 }
 
-.control:hover {
+.control {
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.content-control:hover {
+  /* background-color: rgba(0, 0, 0, 0.199); */
+  opacity: 1;
+}
+/* .control::before :hover{
   background-color: rgba(0, 0, 0, 0.199);
   opacity: 1;
   border-radius: 0;
-}
+} */
 
 img {
   height: 100%;
@@ -125,4 +136,10 @@ img {
     -moz-transition: margin-left 500ms ease-in;
     -o-transition: margin-left 500ms ease-in;
     transition: margin-left 500ms ease-in;
+}
+
+
+#depositions h2 {
+  text-align: center;
+  margin-bottom: 2rem;
 }

@@ -1,10 +1,11 @@
 import { useEffect, useState, } from 'react';
 import './styles.css';
+import logo from './img/P1LOGO.png';
 
 export const WorkMenu = () => {
 
   const [clickedMenu, setClickedMenu] = useState(false);
-  const colorGreen = getComputedStyle(document.documentElement).getPropertyValue('--color-green')
+  const colorGreen = getComputedStyle(document.documentElement).getPropertyValue('--color-green');
 
   useEffect(() => {
 
@@ -51,16 +52,31 @@ export const WorkMenu = () => {
     }
   }
 
+  useEffect(() => {
+    const handleClickMain = () => {
+      setClickedMenu(!clickedMenu);
+      document.querySelector('main').removeEventListener('click', handleClickMain);
+    }
+    document.querySelector('main').addEventListener('click', handleClickMain);
+  }, [clickedMenu])
+
+
   return (
     <aside className="menu bg-color" id="menu">
       <nav>
         <h1>
           <a href="#intro" className='link-menu menu-title'>
-            Folha Facil
+            <img
+              className='img-logo'
+              src={logo}
+              alt="Logo da empresa Folha Fácil"
+            />
+            {/* Folha Facil */}
           </a>
         </h1>
 
-        <div className="links-wrapper" onClick={() => setClickedMenu(!clickedMenu)}>
+        <div className="links-wrapper" onClick={() => { setClickedMenu(!clickedMenu) }
+        }>
           {!clickedMenu && (
             <nav className='menu-icon link-menu'>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -73,9 +89,9 @@ export const WorkMenu = () => {
           {clickedMenu && (
             <ul>
               <li><a href="#intro" className='link-menu' onClick={(e) => scrollMy(e)}>Home</a></li>
+              <li><a href="#advantages" className='link-menu' onClick={(e) => scrollMy(e)}>Vantagens</a></li>
               <li><a href="#solutions" className='link-menu' onClick={(e) => scrollMy(e)}>Soluções</a></li>
-              <li><a href="#questions" className='link-menu' onClick={(e) => scrollMy(e)}>Perguntas</a></li>
-              <li><a href="#depositions" className='link-menu' onClick={(e) => scrollMy(e)}>Contato</a></li>
+              <li><a href="#footer" className='link-menu' onClick={(e) => scrollMy(e)}>Contato</a></li>
             </ul>
           )}
         </div>

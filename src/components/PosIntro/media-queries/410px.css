@@ -1,0 +1,16 @@
+@media (max-width: 410px) {
+  #intro h1 {
+    margin: 0 !important;
+  }
+} 
+
+@media (max-width: 350px) {
+  #intro h1 {
+    width: 95%;
+  }
+} 
+@media (max-width: 326px) {
+  #intro h1 {
+    width: 100% !important;
+  }
+} 

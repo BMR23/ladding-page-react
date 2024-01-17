@@ -1,10 +1,10 @@
-#intro {
+#pos-intro {
   padding-top: 0 !important;
   max-height: max-content !important;
 }
 
 
-#intro .content-1 {
+#pos-intro .content-2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,48 +12,61 @@
   min-height: 100vh;
   color: black;
 }
+@media only screen and (min-height: 700px) {
+  #pos-intro .content-2 {
+    padding-top: 70px;
+    min-height: 0;
+  }
+}
+@media only screen and (min-height: 700px) and (max-width: 1035px) {
+  :root {
+    --font-size-h1: calc(var(--font-size-default) + 1.5rem + 1vw);
+    }
+     .intro-content-2 {
+      flex-shrink: 0;
+      max-width: 50%;
+    }
+}
 
 
 
-.intro-content-1 h1, .intro-content-1 h1>strong {
+.intro-content-2 h1, .intro-content-2 h1>strong {
   font-size: var(--font-size-h1);
   padding-bottom: 3rem;
   max-width: 20ch;
   min-width: 390px;
-  color: white;
   /* max-width: 90%; */
   text-transform: none;
 }
 
-.intro-content-1 strong {
+.intro-content-2 strong {
   color: var(--color-green) !important;
 }
 
-.intro-content-1 > p{
-  color: white;
+.intro-content-2 > p{
   text-align: left;
   margin: 2.5rem 0;
   text-wrap: pretty;
   max-width: 50ch;
 }
 
-/* .intro-content-1 ul {
+.intro-content-2 ul {
   list-style-type: none;
 }
-.intro-content-1 ul li {
+.intro-content-2 ul li {
   position: relative;
   padding-left: 4rem;
 }
-.intro-content-1 ul li::before {
+.intro-content-2 ul li::before {
   position: absolute;
   content: '';
-  background-color: var(--color-blue);
+  background-color: var(--color-green);
   width: 1.5ch;
   height: 1.5ch;
   border-radius: 50%;
   top: .5ch;
   left: 0;
-} */
+}
 
 
 #img-1 {
@@ -67,57 +80,57 @@
 
 }
 @media only screen and (min-height: 610px) {
-  #intro .content-1 img {
+  #pos-intro .content-2 img {
     height: 85vh;
   }
 }
-/* @media only screen and (min-height: 610px) and (max-width: 980px){
-  #intro .content-1 img {
-    height: 85vh;
-  }
-} */
 @media only screen and (min-height: 850px) {
-  #intro .content-1 img {
+  #pos-intro .content-2 img {
     height: 90vh !important;
   }
 }
 @media only screen and (min-height: 900px) {
-  #intro .content-1 img {
+  #pos-intro .content-2 img {
     height: min-content !important;
   }
 }
 
 @media only screen and (min-height: 620px) and (max-width: 462px) {
-  #intro .content-1 > img {
+  #pos-intro .content-2 > img {
     margin-top: -8vh;
   }
 }
 @media only screen and (min-height: 660px) and (max-width: 462px) {
-  #intro .content-1 > img {
+  #pos-intro .content-2 > img {
     margin-top: -13vh;
   }
 }
 @media only screen and (min-height: 760px) and (max-width: 462px) {
-  #intro .content-1 > img {
+  #pos-intro .content-2 > img {
     margin-top: -16vh;
   }
 }
 @media only screen and (min-height: 850px) and (max-width: 462px) {
-  #intro .content-1 > img {
+  #pos-intro .content-2 > img {
     margin-top: -20vh;
   }
 }
 
 
 
-@media only screen and (max-width: 981px) {
+@media only screen and (max-width: 980px) {
   :root {
-  --font-size-h1: calc(var(--font-size-default) + 1.5rem + 1vw) !important;
+  --font-size-h1: calc(var(--font-size-default) + 1.5rem + 1vw);
   }
-   .intro-content-1 {
+   .intro-content-2 {
     flex-shrink: 0;
     max-width: 50%;
-   }
+  }
+  /*#intro img {
+    flex-shrink: 2;
+    max-width: 50%;
+    width: auto;
+  } */
 }
 @media only screen and (max-width: 870px) {
   .grid-one {
@@ -126,17 +139,21 @@
   .grid-one nav {
     padding-bottom: 2rem;
   }
+  #pos-intro h2 {
+    text-align: left !important;
+    width: 90vw;
+    padding-bottom: 2rem;
+  }
 }
 @media only screen and (max-width: 800px) {
   /* main section {
     padding-top: 7rem;
   } */
-  #intro .content-1 {
-    padding-top: 13vh;
+  #pos-intro .content-2 {
     flex-wrap: wrap;
     row-gap: 2rem;
   }
-  #intro .content-1 .intro-content-1 {
+  #pos-intro .content-2 .intro-content-2 {
     position: relative;
     flex-direction: column;
     align-items: center;
@@ -146,36 +163,42 @@
     color: black;
     row-gap: 2rem;
   }
-  #intro .content-1 .intro-content-1 {
+  #pos-intro .content-2 .intro-content-2 {
     max-width: 100%;
-    text-align: center;
   }
-  #intro .content-1 .intro-content-1 h1 ,
-  #intro .content-1 .intro-content-1 p 
+  #pos-intro .content-2 .intro-content-2 h2 ,
+  #pos-intro .content-2 .intro-content-2 p 
   {
-    text-align: center;
+    /* text-align: center; */
     min-width: 0 !important;
     max-width: 100%;
   }
-
-  #intro .content-2 .intro-content-2 button {
+  
+  #pos-intro .content-2 .intro-content-2 button {
     margin: 30px auto;
     width: 100%;
   }
 
-  #intro .content-1 img {
-    margin: 0 auto !important;
+  #pos-intro h2 {
+    /* text-align: center !important; */
+    text-align: left !important;
+    width: 100%;
+  }
+
+  #pos-intro .content-2 img {
+    margin: 0 20px 0 -20px  !important;
+    height: min-content;
   }
     
   
 }
 @media only screen and (max-width: 1328px) {
-  #intro .content-1 img {
+  #pos-intro .content-2 img {
     min-width: 300px;
     margin-left: 2rem;
   }
 
-    .intro-content-1 {
+    .intro-content-2 {
     width: 55%;
   }
 }

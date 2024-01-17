@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 98;
   transition: opacity 0.3s ease-in-out;
   padding: 2rem 0;
 }
@@ -15,26 +15,31 @@
 }
 
 
-.menu-title {
+/* .menu-title {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
   font-size: var(--font-size-menu);
+  height: min-content;
   position: relative;
   margin-bottom: 1.5px;
+} */
+
+.img-logo {
+  width: 60%;
 }
 
-.menu-title::after {
+/* .menu-title::after {
   content: 'Acessoria';
   position: absolute;
-  font-size: .8rem;
+  font-size: calc(.8rem + 0.1vw);
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
   bottom: -5px;
-}
+} */
 
 nav .menu-title-lower {
   font-size: 1rem;

@@ -4,6 +4,7 @@ import ImageTeste from './foto1.png';
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 
+
 export const Card = ({ name, url_image }) => {
 
   // ⭐⭐⭐⭐⭐
@@ -23,7 +24,7 @@ export const Card = ({ name, url_image }) => {
           </div>
         </div>
       </div>
-      <div className="description">
+      <div className="card-description">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           Repudiandae mollitia quas commodi facere.
         </p>

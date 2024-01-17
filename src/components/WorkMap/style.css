@@ -1,0 +1,6 @@
+.maps {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 5rem 0;
+  background: url(https://www.aiag.org/Content/images/admin_throbber.gif) no-repeat center center;
+}

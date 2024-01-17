@@ -1,11 +1,12 @@
 import './styles.css';
 import { WorkMenu } from '../../components/WorkMenu';
 import { WorkIntro } from '../../components/WorkIntro';
-import { WorkSolutions } from '../../components/WorkSolutions';
-import { WorkQuestions } from '../../components/WorkQuestions';
+import { PosIntro } from '../../components/posIntro';
+import { WorkAdvantage } from '../../components/WorkAdvantage';
 import { WorkFooter } from '../../components/WorkFooter';
-import { WorkDepositions } from '../../components/WorkDepositions';
-import { MagicMotion } from 'react-magic-motion'
+import { Gallery } from '../../components/Gallery';
+import { MagicMotion } from 'react-magic-motion';
+import { Solutions } from '../../components/Solutions';
 // import { createContext, useContext } from 'react';
 // import { Button, DatePicker, Card, Carousel } from 'antd';
 // const { Meta } = Card
@@ -28,17 +29,19 @@ export const App = () => {
       <main>
 
 
-
+        {/* <Carousel /> */}
         <WorkIntro />
-        <WorkSolutions />
-
-        <MagicMotion
+        <PosIntro />
+        <WorkAdvantage />
+        <Solutions />
+        {/* <MagicMotion
           transition={{ type: "spring", stiffness: 180, damping: 20, mass: 1.1 }}
         >
-          <WorkQuestions />
-        </MagicMotion>
-        <WorkDepositions />
-
+        </MagicMotion> */}
+        <Gallery />
+        {/* <section>
+          <WorkMap />
+        </section> */}
       </main>
       <WorkFooter />
     </div>

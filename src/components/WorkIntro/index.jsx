@@ -1,6 +1,7 @@
-import imgHome from './javascript.svg';
-import './styles.css'
-import './media-queries/1020px.css'
+import imgHome from './img/P1J.png';
+import './styles.css';
+// import './media-queries/1020px.css'
+import './media-queries/410px.css'
 
 
 export const WorkIntro = () => {
