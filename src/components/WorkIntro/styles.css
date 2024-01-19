@@ -176,6 +176,7 @@
 
   #intro .content-1 img {
     margin: 0 auto !important;
+    height: min-content !important;
   }
     
   
@@ -184,7 +185,7 @@
   #intro .content-1 img {
     min-width: 300px;
     margin-left: 2rem;
-    height: min-content;
+    /* height: 30rem; */
   }
 
     .intro-content-1 {
