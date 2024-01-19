@@ -114,6 +114,7 @@
   }
   #advantages-description > p {
     max-width: 100%;
+    text-wrap: pretty;
   }
 }
 
