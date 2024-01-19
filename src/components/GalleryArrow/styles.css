@@ -1,0 +1,51 @@
+
+.content-controls {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  z-index: 4;
+  top: -5rem;
+  right: 0;
+
+
+  /* height: 100%;
+  width: 8rem; */
+  border: none;
+  /* opacity: 0.5; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: sans-serif;
+  color: white;
+  font-size: 3rem;
+  font-weight: 400;
+  transition: background-color, opacity .6s ease-in-out;
+
+
+}
+.content-control {
+  /* display: flex; */
+
+  border-radius: 50%;
+  background-color: var(--color-black);
+  padding: 1.4rem;
+  /* opacity: 0.5; */
+}
+
+.control {
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.content-control:hover {
+  /* background-color: rgba(0, 0, 0, 0.199); */
+  opacity: 1;
+}
+/* .control::before :hover{
+  background-color: rgba(0, 0, 0, 0.199);
+  opacity: 1;
+  border-radius: 0;
+} */
