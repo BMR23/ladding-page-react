@@ -138,3 +138,22 @@ nav .menu-title-lower {
 .menu ul li a:hover {
   opacity: 1;
 }
+
+@media only screen and (max-width: 410px) {
+
+  .menu ul li a {
+    font-size: 1.5rem;
+  }
+  /* .menu > nav {
+    gap: 2rem;
+  }
+  .menu > nav, .menu ul{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-title {
+    display: flex;
+    justify-content: center;
+  } */
+}

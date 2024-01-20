@@ -6,7 +6,6 @@ import './styles.css';
 
 export const GalleryArrow = ({ func }) => {
 
-
   if (!isMobile) {
     return (
       <div className="content-controls">

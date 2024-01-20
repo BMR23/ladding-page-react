@@ -166,7 +166,11 @@ export const WorkQuestions = ({ questions, responses }) => {
         {/*  */}
 
         <div className="container-button">
-          <button className="button" id='button-questions'>Aqui</button>
+          <button className="button" id='button-questions'>
+            <a href="https://wa.me/+5519974074929" target='_blank' rel="noreferrer">
+              Aqui
+            </a>
+          </button>
         </div>
       </div>
     </section >

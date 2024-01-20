@@ -17,8 +17,12 @@ export const WorkFooter = () => {
           </nav>
           <nav className='footer-description'>© 2023 Folha Fácil - Todos os Direitos Reservados.</nav>
           <nav className="icons">
-            <FaFacebook color='white' className='icon' />
-            <RiInstagramFill color='white' className='icon' />
+            <a href="#" >
+              <FaFacebook className='icon' />
+            </a>
+            <a href="https://www.instagram.com/folhafacil?igsh=eXJwZTJ0czZrMGh4" target='_blank' rel="external noreferrer">
+              <RiInstagramFill className='icon' />
+            </a>
           </nav>
         </div>
       </footer>

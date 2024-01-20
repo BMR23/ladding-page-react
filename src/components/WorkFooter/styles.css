@@ -28,6 +28,11 @@
 
 .icon {
   font-size: 2.8rem;
+  transition: color .2s ease-in-out;
+}
+
+.icon:hover {
+  color: var(--color-blue);
 }
 
 .footer-title {

@@ -2,6 +2,7 @@ import imgHome2 from './img/P2J.png';
 import './styles.css';
 // import './media-queries/1020px.css'
 import './media-queries/410px.css'
+import { scrollMy } from '../../utils/idLink';
 
 
 export const PosIntro = () => {
@@ -24,7 +25,11 @@ export const PosIntro = () => {
             <li>Planos de acordo com o seu perfil;</li>
             <li>Serviços Personalizados, ágeis e seguros;</li>
           </ul>
-          <button className='button'>Conhecer soluções</button>
+          <button className='button'>
+            <a href="#solutions" onClick={(e) => scrollMy(e)}>
+              Conhecer soluções
+            </a>
+          </button>
         </div>
         <img id="img-1" src={imgHome2} alt=""></img>
       </div>

@@ -5,6 +5,8 @@ import foto1 from './img/foto1.png';
 import foto2 from './img/foto2.jpeg';
 import foto3 from './img/foto3.jpeg';
 import { GalleryArrow } from '../GalleryArrow';
+import { isMobile } from 'react-device-detect';
+
 
 export const Gallery = () => {
 
@@ -14,11 +16,16 @@ export const Gallery = () => {
   const items = document.querySelectorAll('.img');
   const maxItems = items.length;
 
-
   useEffect(() => {
     itemsRef.current = document.querySelectorAll('.img');
     setCurrentItem(0);
+
+    if (!isMobile) {
+      const galleryWrapper = document.querySelector('.gallery-wrapper');
+      if (galleryWrapper) galleryWrapper.setAttribute('data-mobile', 'true')
+    }
   }, []);
+
   useEffect(() => {
     const contentControls = document.querySelector('.content-controls')
 
@@ -26,6 +33,7 @@ export const Gallery = () => {
       items.forEach((img) => {
         img.classList.add('opacity-9');
       })
+
     }
   }, [items]);
 

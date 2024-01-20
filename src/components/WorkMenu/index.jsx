@@ -1,6 +1,7 @@
 import { useEffect, useState, } from 'react';
 import './styles.css';
 import logo from './img/P1LOGO.png';
+import { scrollMy } from '../../utils/idLink';
 
 export const WorkMenu = () => {
 
@@ -34,23 +35,6 @@ export const WorkMenu = () => {
       window.addEventListener('scroll', () => menuOpacity(), true);
     }, 1);
   }, [])
-
-  const scrollMy = (e) => {
-    const link = e.target;
-    const targetId = link.getAttribute('href'); // Obtém o ID do link
-    const targetElement = document.querySelector(targetId); // Obtém o elemento alvo
-
-    console.log(targetElement)
-
-    if (targetElement) {
-      e.preventDefault();
-      const targetOffset = targetElement.offsetTop - 50;
-      window.scrollTo({
-        top: targetOffset,
-        behavior: 'smooth' // Scroll suave
-      });
-    }
-  }
 
   useEffect(() => {
     if (!clickedMenu) return;
@@ -92,7 +76,7 @@ export const WorkMenu = () => {
               <li><a href="#intro" className='link-menu' onClick={(e) => scrollMy(e)}>Home</a></li>
               <li><a href="#advantages" className='link-menu' onClick={(e) => scrollMy(e)}>Vantagens</a></li>
               <li><a href="#solutions" className='link-menu' onClick={(e) => scrollMy(e)}>Soluções</a></li>
-              <li><a href="#footer" className='link-menu' onClick={(e) => scrollMy(e)}>Contato</a></li>
+              <li><a href="#footer" className='link-menu' onClick={(e) => scrollMy(e)}>Depoimentos</a></li>
             </ul>
           )}
         </div>

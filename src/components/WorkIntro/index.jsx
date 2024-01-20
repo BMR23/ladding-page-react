@@ -20,7 +20,11 @@ export const WorkIntro = () => {
             contabilidade e permitir que você se concentre no
             crescimento do seu negócio.
           </p>
-          <button className='button'>Solicite um orçamento</button>
+          <button className='button'>
+            <a href="https://wa.me/+5519974074929" target='_blank' rel="noreferrer">
+              Solicite um orçamento
+            </a>
+          </button>
         </div>
         <img id="img-1" src={imgHome} alt=""></img>
       </div>
