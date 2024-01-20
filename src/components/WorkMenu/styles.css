@@ -139,7 +139,7 @@ nav .menu-title-lower {
   opacity: 1;
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 445px) {
 
   .menu ul li a {
     font-size: 1.5rem;
