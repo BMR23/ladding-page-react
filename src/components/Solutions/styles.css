@@ -117,12 +117,11 @@
 .other-solutions-description > ul {
   width: max-content;
   margin: 0 auto;
-  padding-left: 2rem;
 }
 
 .other-solutions-description > ul > li{
   position: relative;
-  padding-left: 0;
+  padding-left: 2rem;
 }
 
 .other-solutions-description > ul > li::before{
@@ -136,8 +135,13 @@
 @media only screen and (max-width: 450px) {
   .other-solutions-description > ul {
     width: 90%;
+  padding-left: 2rem;
     list-style-type: disc;
   }
+  .other-solutions-description > ul > li{
+    padding-left: 0;
+  }
+
   .other-solutions-description > ul > li::before{
     display: none;
   }
