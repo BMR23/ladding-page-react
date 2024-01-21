@@ -52,7 +52,7 @@ export const Solutions = () => {
               <div className='card-solution-text'>
                 <h3>Admissão e demissão de funcionários</h3>
                 <p>
-                  O departamento pessoal é responsável por todo o processo de admissão e demissão de funcionários.
+                  A Declaração de Imposto de Renda Pessoa Física (DIRPF) é um documento que deve ser preenchido por todas as pessoas físicas que receberam rendimentos tributáveis no ano anterior.
                 </p>
                 <nav className="container-button">
                   <button className="button">
