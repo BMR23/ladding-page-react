@@ -3,7 +3,6 @@
   max-height: max-content !important;
 }
 
-
 #intro .content-1 {
   display: flex;
   justify-content: space-between;
@@ -13,15 +12,12 @@
   color: black;
 }
 
-
-
 .intro-content-1 h1, .intro-content-1 h1>strong {
   font-size: var(--font-size-h1);
   padding-bottom: 3rem;
   max-width: 20ch;
   min-width: 390px;
   color: white;
-  /* max-width: 90%; */
   text-transform: none;
 }
 
@@ -37,38 +33,18 @@
   max-width: 50ch;
 }
 
-/* .intro-content-1 ul {
-  list-style-type: none;
-}
-.intro-content-1 ul li {
-  position: relative;
-  padding-left: 4rem;
-}
-.intro-content-1 ul li::before {
-  position: absolute;
-  content: '';
-  background-color: var(--color-blue);
-  width: 1.5ch;
-  height: 1.5ch;
-  border-radius: 50%;
-  top: .5ch;
-  left: 0;
-} */
-
-
 #img-1 {
-  /* width: 53%; */
-  /* max-width: 50%;s */
-  /* height: 85%; */
-  /* height: 79vh; */
   height: 89vh !important;
-  padding-top: 3rem;
   min-height: 30vw;
   width: min-content;
   object-fit: scale-down;
-  /* height: 79% !important; */
-
+} @media  only screen and (min-width: 982px) {
+  #img-1 {
+  padding-top: 3rem;
+    
+  }
 }
+
 @media only screen and (max-height: 630px) {
   :root {
     --font-size-h1: 4.5rem !important;
@@ -79,49 +55,6 @@
     padding-top: 20vh;
   }
 }
-/* @media only screen and (min-height: 610px) {
-  #intro .content-1 img {
-    height: 85vh;
-  }
-} */
-/* @media only screen and (min-height: 610px) and (max-width: 980px){
-  #intro .content-1 img {
-    height: 85vh;
-  }
-} */
-/* @media only screen and (min-height: 850px) {
-  #intro .content-1 img {
-    height: 90vh !important;
-  }
-}
-@media only screen and (min-height: 900px) {
-  #intro .content-1 img {
-    height: min-content !important;
-  }
-}
-
-@media only screen and (min-height: 620px) and (max-width: 462px) {
-  #intro .content-1 > img {
-    margin-top: -8vh;
-  }
-}
-@media only screen and (min-height: 660px) and (max-width: 462px) {
-  #intro .content-1 > img {
-    margin-top: -13vh;
-  }
-}
-@media only screen and (min-height: 760px) and (max-width: 462px) {
-  #intro .content-1 > img {
-    margin-top: -16vh;
-  }
-}
-@media only screen and (min-height: 850px) and (max-width: 462px) {
-  #intro .content-1 > img {
-    margin-top: -20vh;
-  }
-} */
-
-
 
 @media only screen and (max-width: 981px) {
   :root {
@@ -131,11 +64,8 @@
     flex-shrink: 0;
     max-width: 50%;
    }
-
-   #img {
-    padding-top: 0 !important;
-   }
 }
+
 @media only screen and (max-width: 870px) {
   .grid-one {
     display: block;
@@ -144,6 +74,7 @@
     padding-bottom: 2rem;
   }
 }
+
 @media only screen and (max-width: 800px) {
   /* main section {
     padding-top: 7rem;
@@ -153,6 +84,7 @@
     flex-wrap: wrap;
     row-gap: 2rem;
   }
+
   #intro .content-1 .intro-content-1 {
     position: relative;
     flex-direction: column;
@@ -163,10 +95,12 @@
     color: black;
     row-gap: 2rem;
   }
+
   #intro .content-1 .intro-content-1 {
     max-width: 100%;
     text-align: center;
   }
+
   #intro .content-1 .intro-content-1 h1 ,
   #intro .content-1 .intro-content-1 p 
   {
@@ -184,9 +118,8 @@
     margin: 0 auto !important;
     height: min-content !important;
   }
-    
-  
 }
+
 @media only screen and (max-width: 1328px) {
   #intro .content-1 img {
     min-width: 300px;
@@ -198,11 +131,13 @@
     width: 55%;
   }
 }
+
 @media only screen and (max-width: 1005px) {
   :root {
     --font-size-h1: calc(var(--font-size-default) + 2rem + 1vw);
     }
 }
+
 @media only screen and (max-width: 480px) {
   
 }
