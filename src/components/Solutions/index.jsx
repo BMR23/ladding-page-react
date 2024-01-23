@@ -50,7 +50,7 @@ export const Solutions = () => {
             <div className="card-solution">
               <img src={E3} alt="" />
               <div className='card-solution-text'>
-                <h3>Admissão e demissão de funcionários</h3>
+                <h3>Declaração de Imposto de renda Pessoa Física</h3>
                 <p>
                   A Declaração de Imposto de Renda Pessoa Física (DIRPF) é um documento que deve ser preenchido por todas as pessoas físicas que receberam rendimentos tributáveis no ano anterior.
                 </p>
