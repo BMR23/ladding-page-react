@@ -60,7 +60,9 @@
   /* width: 53%; */
   /* max-width: 50%;s */
   /* height: 85%; */
-  height: 79vh;
+  /* height: 79vh; */
+  height: 89vh !important;
+  padding-top: 3rem;
   min-height: 30vw;
   width: min-content;
   object-fit: scale-down;
@@ -128,6 +130,10 @@
    .intro-content-1 {
     flex-shrink: 0;
     max-width: 50%;
+   }
+
+   #img {
+    padding-top: 0 !important;
    }
 }
 @media only screen and (max-width: 870px) {
