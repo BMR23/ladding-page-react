@@ -1,9 +1,6 @@
 import "./styles.css";
 import { useEffect, useRef, useState } from 'react';
 import { Card } from '../Card';
-import foto1 from './img/foto1.png';
-import foto2 from './img/foto2.jpeg';
-import foto3 from './img/foto3.jpeg';
 import { GalleryArrow } from '../GalleryArrow';
 import { isMobile } from 'react-device-detect';
 
@@ -75,28 +72,40 @@ export const Gallery = () => {
 
   const infoCard = [
     {
-      name: 'Hello',
-      url_image: foto1
+      // url_image: foto1,
+      name: 'Joao da Silva',
+      stars: 10,
+      text: 'A folha Facil nos ajuda a reduzir os custos com folha de pagamento em 20%. Além disso, o processo de folha de pagamento ficou muito mais eficiente.'
     },
     {
-      name: 'Hello',
-      url_image: foto2
+      // url_image: foto1,
+      name: 'Maria da Costa',
+      stars: 9,
+      text: 'A folha Facil é uma empresa de confiança que oferece um serviço de alta qualidade. A equipe é sempre muito profissional e ajuda a cumprir todas as obrigações trabalhistas.'
     },
     {
-      name: 'Hello',
-      url_image: foto3
+      // url_image: foto1,
+      name: 'José dos Santos',
+      stars: 10,
+      text: 'A folha Facil nos ajuda a evitar uma multa trabalhista de R$ 100.000,00.'
     },
     {
-      name: 'Hello',
-      url_image: foto1
+      // url_image: foto1,
+      name: 'Maria da Costa',
+      stars: 9,
+      text: 'A folha Facil é uma empresa de confiança que oferece um serviço de alta qualidade. A equipe é sempre muito profissional e ajuda a cumprir todas as obrigações trabalhistas.'
     },
     {
-      name: 'Hello',
-      url_image: foto2
+      // url_image: foto1,
+      name: 'Joao da Silva',
+      stars: 10,
+      text: 'A folha Facil nos ajuda a reduzir os custos com folha de pagamento em 20%. Além disso, o processo de folha de pagamento ficou muito mais eficiente.'
     },
     {
-      name: 'Hello',
-      url_image: foto3
+      // url_image: foto1,
+      name: 'José dos Santos',
+      stars: 10,
+      text: 'A folha Facil nos ajuda a evitar uma multa trabalhista de R$ 100.000,00.'
     },
   ]
 
@@ -112,7 +121,7 @@ export const Gallery = () => {
                 // <img className='img' key={index}
                 //   src={e.url} alt={e.alt} />
                 <div className="container-card img" key={index}>
-                  <Card name={e.name} url_image={e.url_image} />
+                  <Card name={e.name} url_image={e.url_image} text={e.text} stars={e.stars} />
                 </div>
               ))}
             </div>
