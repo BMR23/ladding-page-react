@@ -123,6 +123,7 @@
 @media only screen and (max-width: 1328px) {
   #intro .content-1 img {
     min-width: 300px;
+    max-height: 450px;
     margin-left: 2rem;
     /* height: 30rem; */
   }

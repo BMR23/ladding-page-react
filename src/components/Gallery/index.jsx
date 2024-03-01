@@ -30,7 +30,6 @@ export const Gallery = () => {
       items.forEach((img) => {
         img.classList.add('opacity-9');
       })
-
     }
   }, [items]);
 
@@ -46,7 +45,7 @@ export const Gallery = () => {
           img.scrollIntoView({
             inline: "center",
             behavior: "smooth",
-            block: "center",
+            block: "nearest",
           });
         }
       });
@@ -72,40 +71,34 @@ export const Gallery = () => {
 
   const infoCard = [
     {
-      // url_image: foto1,
-      name: 'Joao da Silva',
+      name: 'Moraes Contabilidade Digital',
       stars: 10,
-      text: 'A folha Facil nos ajuda a reduzir os custos com folha de pagamento em 20%. Além disso, o processo de folha de pagamento ficou muito mais eficiente.'
+      text: 'Recomendo o Folha Facil Assessoria, orientação clara, objetiva, agilidade e muito profissionalismo.'
     },
     {
-      // url_image: foto1,
-      name: 'Maria da Costa',
+      name: 'Dínamo Cecon Ltda',
+      stars: 10,
+      text: 'Depois que terceirizamos o Departamento Pessoal temos mais tempo para focar nos clientes pois a rotina da folha de pagamento está sendo bem executada pelo Folha Facil Assessoria e não temos mais dor de cabeça com o envio do eSocial.'
+    },
+    {
+      name: 'Exodo Contabilidade',
+      stars: 10,
+      text: ' A equipe do Folha Facil Assessoria esclarecem de forma clara as dúvidas trabalhistas dos nossos clientes e fazem toda a rotina do departamento pessoal.'
+    },
+    {
+      name: 'Paulo SilMotor',
       stars: 9,
-      text: 'A folha Facil é uma empresa de confiança que oferece um serviço de alta qualidade. A equipe é sempre muito profissional e ajuda a cumprir todas as obrigações trabalhistas.'
+      text: 'Uma equipe prestativa e de confiança. Sempre dispostos a tirar nossas dúvidas e nos orientarem. Realizam um excelente trabalho.'
     },
     {
-      // url_image: foto1,
-      name: 'José dos Santos',
+      name: 'Ana Lucia Minemercado Ltda',
       stars: 10,
-      text: 'A folha Facil nos ajuda a evitar uma multa trabalhista de R$ 100.000,00.'
+      text: 'Uma equipe maravilhosa que temos muito a agradecer, competente, comprometida e receptiva, da qual somos clientes a mais de 10 anos. Muito obrigado a todos do Folha Facil Assessoria.'
     },
     {
-      // url_image: foto1,
-      name: 'Maria da Costa',
-      stars: 9,
-      text: 'A folha Facil é uma empresa de confiança que oferece um serviço de alta qualidade. A equipe é sempre muito profissional e ajuda a cumprir todas as obrigações trabalhistas.'
-    },
-    {
-      // url_image: foto1,
-      name: 'Joao da Silva',
+      name: 'Skina Frango na Brasa',
       stars: 10,
-      text: 'A folha Facil nos ajuda a reduzir os custos com folha de pagamento em 20%. Além disso, o processo de folha de pagamento ficou muito mais eficiente.'
-    },
-    {
-      // url_image: foto1,
-      name: 'José dos Santos',
-      stars: 10,
-      text: 'A folha Facil nos ajuda a evitar uma multa trabalhista de R$ 100.000,00.'
+      text: 'Só tenho a agradecer pela dedicação e comprometimento do Folha Facil Assessoria. São profissionais altamente qualificados que passam segurança e confiabilidade na execução dos serviços prestados.'
     },
   ]
 

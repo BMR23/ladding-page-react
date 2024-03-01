@@ -195,6 +195,7 @@
 @media only screen and (max-width: 1328px) {
   #pos-intro .content-2 img {
     min-width: 300px;
+    height: min-content !important;
     margin-left: 2rem;
   }
 
@@ -206,7 +207,4 @@
   :root {
     --font-size-h1: calc(var(--font-size-default) + 2rem + 1vw);
     }
-}
-@media only screen and (max-width: 480px) {
-  
 }
